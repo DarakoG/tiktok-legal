@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Reel Publisher</title>
+<style>body{max-width:44rem;margin:3rem auto;padding:0 1.25rem;font:16px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;color:#1a1a1a}h2{margin-top:2rem;font-size:1.05rem}a{color:#0b5fff}code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px}</style>
+</head><body>
+<p><a href="./index.html">← Reel Publisher</a></p>
+<h1>Privacy Policy — Reel Publisher (TikTok Integration)</h1>
+<p><em>Last updated: 2026-11-09</em></p>
+
+<h2>1. What data this application accesses</h2>
+<p>When the operator authorizes the application with TikTok, the application receives and stores:</p>
+<ul>
+<li>the OAuth access token and refresh token issued by TikTok;</li>
+<li>the TikTok account identifiers returned by the API: <code>open_id</code>, <code>union_id</code>, username, display name, and avatar URL;</li>
+<li>the content being published: the video file, its title/description, and the posting settings (privacy level, duet/stitch/comment flags).</li>
+</ul>
+<p>No other personal data, contact lists, messages, or browsing activity are accessed.</p>
+
+<h2>2. Where the data is stored</h2>
+<p>All data stays on the operator's own computer: a local PostgreSQL database, a local Redis instance, and the local filesystem, all bound to the local machine. There is no cloud backend, no third-party analytics, no advertising, and no data broker.</p>
+
+<h2>3. How the data is used</h2>
+<p>The data is used only to authenticate with TikTok, upload the video, publish the post, and read back the resulting post status and basic statistics.</p>
+
+<h2>4. Sharing</h2>
+<p>Nothing is shared with third parties. The only outbound transmission is to TikTok's official API (<code>open.tiktokapis.com</code>), which is required in order to publish the content. Data is never sold.</p>
+
+<h2>5. Retention</h2>
+<p>OAuth tokens are kept until the operator disconnects the integration or revokes access from the TikTok account settings. Post records and video files are kept locally for as long as the operator chooses, and can be deleted at any time by the operator.</p>
+
+<h2>6. Security</h2>
+<p>The application runs on a single machine and its services are reachable only from that machine. API credentials are kept in local configuration files that are excluded from version control.</p>
+
+<h2>7. Rights and deletion</h2>
+<p>Authorized access can be revoked at any time from TikTok's settings (Settings and privacy → Security and login → Manage app permissions). Revoking access invalidates the stored tokens; the remaining local records can be deleted by the operator at any time.</p>
+
+<h2>8. Contact</h2>
+<p><a href="https://github.com/DarakoG">github.com/DarakoG</a></p>
+</body></html>
